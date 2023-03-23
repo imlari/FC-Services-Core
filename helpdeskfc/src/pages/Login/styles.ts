@@ -1,20 +1,6 @@
 import styled from "styled-components";
 import { ContainerHeader } from "../../Components/Header/styles";
 
-export const ScreenContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-
-  @media(max-width: 450px) {
-    ${ContainerHeader} {
-      display: none;
-    }
-  }
-`;
-
 export const LoginBoxContainer = styled.div`
   display: flex;
   width: 40rem;
@@ -89,7 +75,7 @@ export const InputLogin = styled.input`
   padding-left: 1.5rem;
   margin-top: 0.5rem;
 `;
-export const ButtoLogin = styled.button`
+export const ButtonLogin = styled.button`
   width: 32rem;
   height: 4rem;
   background: #da0812;
@@ -111,5 +97,66 @@ export const ContainerLogin = styled.div`
   flex-direction: column;
   .GoLeft {
     align-self: flex-end;
+  }
+`;
+
+export const Logo = styled.div`
+  padding: 107px 64px;
+`;
+export const LoginMobile = styled.div`
+  display: none;
+  width: 100%;
+  padding: 0px 20px;
+`;
+
+export const TextMobile = styled.div`
+  margin-bottom: 20px;
+  h1 {
+    color: #53565a;
+    font-size: 3.2rem;
+  }
+`;
+export const InputMobile = styled.input`
+  height: 5.5rem;
+  width: 100%;
+  background-color: #e5e6e6;
+  padding: 8px 4px;
+  border-radius: 4px 4px 0px 0px;
+  margin-bottom: 8px;
+`;
+
+export const InputSection = styled.div`
+  & > div {
+    margin-bottom: 28px;
+  }
+`;
+export const EmailInput = styled.div``;
+export const PasswordInput = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  span {
+    color: #5a8f19;
+    font-size: 14px;
+  }
+`;
+export const ScreenContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  @media (max-width: 450px) {
+    ${LoginMobile} {
+      display: block;
+    }
+    background-color: #ffffff;
+    ${ContainerHeader} {
+      display: none;
+    }
+    ${LoginBoxContainer} {
+      display: none;
+    }
   }
 `;
