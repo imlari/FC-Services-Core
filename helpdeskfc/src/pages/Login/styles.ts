@@ -116,32 +116,64 @@ export const TextMobile = styled.div`
     font-size: 3.2rem;
   }
 `;
-export const InputMobile = styled.input`
-  display: flex;
-  align-items: center;
-  padding-right: 4px;
-  height: 5.5rem;
-  width: 100%;
-  background-color: #e5e6e6;
-  padding: 8px 4px;
-  border-radius: 4px 4px 0px 0px;
-  margin-bottom: 8px;
-  font-size: 2rem;
-  color: #1C1B1FB2;
-  font-weight: 400;
-  `;
-  
-  export const InputSection = styled.div`
+
+export const InputSection = styled.div`
   & > div {
     margin-bottom: 28px;
   }
+  & > div > input {
+    display: flex;
+    align-items: center;
+    height: 5.5rem;
+    width: 100%;
+    background-color: #e5e6e6;
+    padding: 8px 48px;
+    border-radius: 4px 4px 0px 0px;
+    margin-bottom: 8px;
+    font-size: 2rem;
+    color: #1c1b1fb2;
+    font-weight: 400;
+  }
 `;
-export const EmailInput = styled.div``;
+export const PasswordMobile = styled.input``;
+
+export const EmailMobile = styled.input``;
+export const EmailInput = styled.div`
+
+`;
+
+export const LeftImg = styled.img`
+  position: absolute;
+  margin-top: -5.5rem;
+  margin-left: 0.5rem;
+`;
+
+export const RightImg = styled.img`
+  position: absolute;
+  margin-top: -5.5rem;
+  margin-left: 32.5rem;
+`;
 export const PasswordInput = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  
+  & > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  & > input {
+    display: flex;
+    align-items: center;
+    padding-right: 4px;
+    height: 5.5rem;
+    width: 100%;
+    background-color: #e5e6e6;
+    padding: 8px 4px;
+    border-radius: 4px 4px 0px 0px;
+    margin-bottom: 8px;
+    font-size: 2rem;
+    color: #1c1b1fb2;
+    font-weight: 400;
+  }
+
   span {
     text-align: end;
     color: #5a8f19;
@@ -155,8 +187,9 @@ export const ButtonSection = styled.div`
   flex-direction: column;
   margin-top: 40px;
   gap: 12px;
-  
-  span, p {
+
+  span,
+  p {
     font-weight: 500;
     text-align: center;
   }
@@ -169,10 +202,10 @@ export const ButtonSection = styled.div`
   }
 
   p > span {
-    color: #2B6C01;
+    color: #2b6c01;
     font-size: 16px;
   }
-`
+`;
 
 export const LogIn = styled.button`
   display: flex;
@@ -182,9 +215,9 @@ export const LogIn = styled.button`
   height: 40px;
   width: 100%;
   gap: 8px;
-  background-color: #E71C35;
+  background-color: #e71c35;
   color: #fff;
-` 
+`;
 export const ScreenContainer = styled.div`
   display: flex;
   flex-direction: column;
