@@ -128,6 +128,7 @@ export const InputMobile = styled.input`
   margin-bottom: 8px;
   font-size: 2rem;
   color: #1C1B1FB2;
+  font-weight: 400;
   `;
   
   export const InputSection = styled.div`
