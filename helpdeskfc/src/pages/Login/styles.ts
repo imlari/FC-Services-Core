@@ -215,8 +215,11 @@ export const LogIn = styled.button`
   height: 40px;
   width: 100%;
   gap: 8px;
-  background-color: #e71c35;
+  background: #e71c35;
   color: #fff;
+  &:active {
+    background: #f03c4c;
+  }
 `;
 export const ScreenContainer = styled.div`
   display: flex;
