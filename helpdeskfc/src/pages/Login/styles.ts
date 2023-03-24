@@ -119,7 +119,7 @@ export const TextMobile = styled.div`
 export const InputMobile = styled.input`
   display: flex;
   align-items: center;
-  paddig-right: 4px;
+  padding-right: 4px;
   height: 5.5rem;
   width: 100%;
   background-color: #e5e6e6;
