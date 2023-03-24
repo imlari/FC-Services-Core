@@ -18,9 +18,12 @@ import {
   InputSection,
   EmailInput,
   PasswordInput,
+  ButtonSection,
+  LogIn,
 } from "./styles";
 import HiddenIcon from './svg/hidden.svg'
 import { Fclogomobile } from '../../Assets/fclogomobile';
+import LoginIcon from './svg/login.svg'
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -54,10 +57,18 @@ export const Login = () => {
             <InputMobile type="text" placeholder="Digite o seu email"></InputMobile>
           </EmailInput>
           <PasswordInput>
-            <InputMobile type="text" placeholder="Digite a sua senha"></InputMobile>
+            <InputMobile type="password" placeholder="Digite a sua senha"></InputMobile>
             <span>Esqueci a senha</span>
           </PasswordInput>
         </InputSection>
+        <ButtonSection>
+          <LogIn>
+            <img src={LoginIcon} />
+            Entrar
+            </LogIn>
+           <span>OU</span>
+           <p>Não possui uma conta? <span>Cadastre-se</span></p>
+        </ButtonSection>
       </LoginMobile>
     </ScreenContainer>
   );

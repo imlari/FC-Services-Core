@@ -8,7 +8,7 @@ export const LoginBoxContainer = styled.div`
   background: #f6f7f7;
   box-shadow: 0px 10px 19px rgba(178, 179, 181, 0.7);
   border-radius: 6px;
-  margin-top: 13.6rem;
+  margin-top: 8.25rem;
   flex-direction: column;
   align-items: center;
 `;
@@ -117,29 +117,73 @@ export const TextMobile = styled.div`
   }
 `;
 export const InputMobile = styled.input`
+  display: flex;
+  align-items: center;
+  paddig-right: 4px;
   height: 5.5rem;
   width: 100%;
   background-color: #e5e6e6;
   padding: 8px 4px;
   border-radius: 4px 4px 0px 0px;
   margin-bottom: 8px;
-`;
-
-export const InputSection = styled.div`
+  font-size: 2rem;
+  color: #1C1B1FB2;
+  `;
+  
+  export const InputSection = styled.div`
   & > div {
     margin-bottom: 28px;
   }
 `;
 export const EmailInput = styled.div``;
 export const PasswordInput = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
-
+  
   span {
+    text-align: end;
     color: #5a8f19;
     font-size: 14px;
+    font-weight: 500;
   }
 `;
+
+export const ButtonSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 12px;
+  
+  span, p {
+    font-weight: 500;
+    text-align: center;
+  }
+  span {
+    font-size: 14px;
+  }
+  p {
+    font-size: 16px;
+    color: #131312;
+  }
+
+  p > span {
+    color: #2B6C01;
+    font-size: 16px;
+  }
+`
+
+export const LogIn = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  height: 40px;
+  width: 100%;
+  gap: 8px;
+  background-color: #E71C35;
+  color: #fff;
+` 
 export const ScreenContainer = styled.div`
   display: flex;
   flex-direction: column;
