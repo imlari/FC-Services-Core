@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alisson.assuncao\\Documents\\Atividade Mobile\\GrowUp-SQD1-FCX\\helpdeskfc back-end\\backend squad1.csproj": {}
+    "c:\\Users\\alisson.assuncao\\Documents\\Atividade Mobile\\GrowUp-SQD1-FCX\\helpdeskfc back-end\\backend squad1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alisson.assuncao\\Documents\\Atividade Mobile\\GrowUp-SQD1-FCX\\helpdeskfc back-end\\backend squad1.csproj": {
+    "c:\\Users\\alisson.assuncao\\Documents\\Atividade Mobile\\GrowUp-SQD1-FCX\\helpdeskfc back-end\\backend squad1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alisson.assuncao\\Documents\\Atividade Mobile\\GrowUp-SQD1-FCX\\helpdeskfc back-end\\backend squad1.csproj",
+        "projectUniqueName": "c:\\Users\\alisson.assuncao\\Documents\\Atividade Mobile\\GrowUp-SQD1-FCX\\helpdeskfc back-end\\backend squad1.csproj",
         "projectName": "backend squad1",
-        "projectPath": "C:\\Users\\alisson.assuncao\\Documents\\Atividade Mobile\\GrowUp-SQD1-FCX\\helpdeskfc back-end\\backend squad1.csproj",
+        "projectPath": "c:\\Users\\alisson.assuncao\\Documents\\Atividade Mobile\\GrowUp-SQD1-FCX\\helpdeskfc back-end\\backend squad1.csproj",
         "packagesPath": "C:\\Users\\alisson.assuncao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alisson.assuncao\\Documents\\Atividade Mobile\\GrowUp-SQD1-FCX\\helpdeskfc back-end\\obj\\",
+        "outputPath": "c:\\Users\\alisson.assuncao\\Documents\\Atividade Mobile\\GrowUp-SQD1-FCX\\helpdeskfc back-end\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alisson.assuncao\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
