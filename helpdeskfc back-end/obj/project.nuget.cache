@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "h9wCnoUJsC2z7DxWXAGoiwSUq96G7/NjHUliQ5XpmliBqGl4fI0As6Td0PzmKxsxZOYGlWw9rCwz430D0STzEg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alisson.assuncao\\Documents\\Atividade Mobile\\GrowUp-SQD1-FCX\\helpdeskfc back-end\\backend squad1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alisson.assuncao\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\alisson.assuncao\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\alisson.assuncao\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\alisson.assuncao\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\alisson.assuncao\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\alisson.assuncao\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

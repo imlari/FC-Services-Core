@@ -1,0 +1,54 @@
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\bin\Debug\net6.0\appsettings.json
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\bin\Debug\net6.0\backend squad1.exe
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\bin\Debug\net6.0\backend squad1.deps.json
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\bin\Debug\net6.0\backend squad1.runtimeconfig.json
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\bin\Debug\net6.0\backend squad1.dll
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\bin\Debug\net6.0\backend squad1.pdb
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\backend squad1.csproj.AssemblyReference.cache
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\backend squad1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\backend squad1.AssemblyInfoInputs.cache
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\backend squad1.AssemblyInfo.cs
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\backend squad1.csproj.CoreCompileInputs.cache
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\backend squad1.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\backend squad1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\scopedcss\bundle\backend squad1.styles.css
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\backend squad1.csproj.CopyComplete
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\backend squad1.dll
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\refint\backend squad1.dll
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\backend squad1.pdb
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\backend squad1.genruntimeconfig.cache
+C:\Users\alisson.assuncao\Desktop\Teste\backend squad1\obj\Debug\net6.0\ref\backend squad1.dll
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\bin\Debug\net6.0\appsettings.json
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\bin\Debug\net6.0\backend squad1.exe
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\bin\Debug\net6.0\backend squad1.deps.json
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\bin\Debug\net6.0\backend squad1.runtimeconfig.json
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\bin\Debug\net6.0\backend squad1.dll
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\bin\Debug\net6.0\backend squad1.pdb
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\backend squad1.csproj.AssemblyReference.cache
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\backend squad1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\backend squad1.AssemblyInfoInputs.cache
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\backend squad1.AssemblyInfo.cs
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\backend squad1.csproj.CoreCompileInputs.cache
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\backend squad1.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\backend squad1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\scopedcss\bundle\backend squad1.styles.css
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\backend squad1.csproj.CopyComplete
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\backend squad1.dll
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\refint\backend squad1.dll
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\backend squad1.pdb
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\backend squad1.genruntimeconfig.cache
+C:\Users\alisson.assuncao\Documents\Atividade Mobile\GrowUp-SQD1-FCX\helpdeskfc back-end\obj\Debug\net6.0\ref\backend squad1.dll
