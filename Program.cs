@@ -1,4 +1,8 @@
+using Microsoft.AspNetCore.Cors;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 // Add services to the container.
 
@@ -8,6 +12,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseCors(options => options
+    .AllowAnyOrigin() // Adicione aqui o endereço do seu aplicativo
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -23,3 +33,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+

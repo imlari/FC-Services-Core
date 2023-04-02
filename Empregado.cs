@@ -1,8 +1,8 @@
 namespace backend_squad1;
 
-public class Usuario
+public class Empregado
 {
-    public string Matricula { get; set; }
+    public int Matricula { get; set; }
     public string Nome { get; set; }
     public string Funcao { get; set; }
     public string Email { get; set; }
