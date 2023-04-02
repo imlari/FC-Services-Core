@@ -41,7 +41,7 @@ namespace backend_squad1.Controllers
 
         private string GerarTokenJWT(string email)
 {
-    string chaveSecreta = "sqd1";
+    string chaveSecreta = "minha-chave-secreta-123";
     var chaveSimetrica = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(chaveSecreta));
 
     // Definir as informações do usuário que serão adicionadas ao token
@@ -52,13 +52,14 @@ namespace backend_squad1.Controllers
 
     // Definir as configurações do token, incluindo a duração e a chave de assinatura
     var tokenConfig = new JwtSecurityToken(
-        issuer: "squad1",
-        audience: "squad1.com",
+        issuer: "minha-empresa.com",
+        audience: "minha-empresa.com",
         claims: claims,
         expires: DateTime.UtcNow.AddHours(1),
         signingCredentials: new SigningCredentials(chaveSimetrica, SecurityAlgorithms.HmacSha256)
     );
 
+    // Gerar o token como uma string
     var tokenHandler = new JwtSecurityTokenHandler();
     var tokenString = tokenHandler.WriteToken(tokenConfig);
 
