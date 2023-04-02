@@ -4,15 +4,14 @@
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/helpdeskfc back-end/bin/Debug/net6.0/backend squad1.dll",
+            "program": "${workspaceFolder}/bin/Debug/net6.0/backend squad1.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/helpdeskfc back-end",
+            "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
