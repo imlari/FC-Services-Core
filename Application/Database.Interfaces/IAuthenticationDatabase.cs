@@ -1,5 +1,4 @@
 ﻿namespace Database.Interfaces;
 
-public interface IAuthenticationDatabase
-{
-}
+public interface IAuthenticationDatabase: IMysqlDatabase
+{ }

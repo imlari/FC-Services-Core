@@ -1,5 +1,4 @@
 ﻿namespace Database.Interfaces;
 
-public interface IFeedDatabase
-{
-}
+public interface IFeedDatabase: IMysqlDatabase
+{ }
