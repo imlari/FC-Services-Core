@@ -2576,11 +2576,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aliss\\OneDrive\\Área de Trabalho\\Projetos\\GrowUp-SQD1-FCX\\backend squad1.csproj",
+      "projectUniqueName": "C:\\Users\\aliss\\OneDrive\\Área de Trabalho\\Projetos\\FC-Services-Core\\backend squad1.csproj",
       "projectName": "backend squad1",
-      "projectPath": "C:\\Users\\aliss\\OneDrive\\Área de Trabalho\\Projetos\\GrowUp-SQD1-FCX\\backend squad1.csproj",
+      "projectPath": "C:\\Users\\aliss\\OneDrive\\Área de Trabalho\\Projetos\\FC-Services-Core\\backend squad1.csproj",
       "packagesPath": "C:\\Users\\aliss\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aliss\\OneDrive\\Área de Trabalho\\Projetos\\GrowUp-SQD1-FCX\\obj\\",
+      "outputPath": "C:\\Users\\aliss\\OneDrive\\Área de Trabalho\\Projetos\\FC-Services-Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aliss\\AppData\\Roaming\\NuGet\\NuGet.Config"

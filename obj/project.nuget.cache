@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3B/MGOuoD8uhHmNNSmDOhsZ4TlcYuwo+K8Irtox39Q0YFewvZWo+KLVdQ/Q5XVLVsOMFT6R4yCqqschB8L9rTQ==",
+  "dgSpecHash": "Aov92NFkDAieXg104OgRu/bwgzwPb5m3ibJUXDFxwN+LQcmtjFITQMWET/HO97KoaV3JIXi9HWfaJzRtPLUCMQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aliss\\OneDrive\\Área de Trabalho\\Projetos\\GrowUp-SQD1-FCX\\backend squad1.csproj",
+  "projectFilePath": "C:\\Users\\aliss\\OneDrive\\Área de Trabalho\\Projetos\\FC-Services-Core\\backend squad1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aliss\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\aliss\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",
