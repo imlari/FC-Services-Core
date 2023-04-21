@@ -1,4 +1,6 @@
-﻿namespace Database.Interfaces;
+﻿using Models.Database;
+
+namespace Database.Interfaces;
 
 public interface IMysqlDatabase
 {
@@ -6,4 +8,10 @@ public interface IMysqlDatabase
     void Close();
     void Commit();
     void Rollback();
+
+    void Execute(DbExecuteArgument arg);
+    T? Execute<T>(DbExecuteScalarArgument args);
+
+    T? Find<T>(DbExecuteArgument arg);
+    List<T> ExecuteReader<T>(DbExecuteArgument arg);
 }
