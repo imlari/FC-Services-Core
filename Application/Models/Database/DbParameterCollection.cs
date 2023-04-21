@@ -8,12 +8,14 @@ public class DbParameterCollection
 
     private DbParameterCollection() { }
 
+    private string HandleName(string name) => name.Substring(0, 1) == "%"? name : $"@{name}";
+
     public DbParameterCollection Add(string name, object? value, ParameterDirection direction)
     {
         this.Parameters.Add(
             new DbParameter
             {
-                Name = name,
+                Name = this.HandleName(name),
                 Value = value,
                 Direction = direction
             }
@@ -26,7 +28,7 @@ public class DbParameterCollection
         this.Parameters.Add(
             new DbParameter
             {
-                Name = name,
+                Name = this.HandleName(name),
                 Value = null,
                 Direction = direction
             }
