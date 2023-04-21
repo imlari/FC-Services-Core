@@ -7,6 +7,4 @@ public class Empregado
     public string Funcao { get; set; }
     public string Email { get; set; }
     public string Senha { get; set; }
-
-    public bool Solucionador { get; set; }
 }
