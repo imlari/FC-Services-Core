@@ -36,6 +36,6 @@ public sealed class Pbkdf2Security: IPbkdf2Security
         var info = Pbkdf2Utils.Read(BinaryConverter.ToBytesView(derived, BinaryViewModels.BinaryView.BASE64), numBytes);
         var result = this.DeriveValue(value, info.Salt.ToArray(), hashDerivation);
 
-        return BinaryConverter.ToStringView(result, BinaryViewModels.BinaryView.BASE64) == BinaryConverter.ToStringView(info.Derivated.ToArray(), Models.Security.BinaryViewModels.BinaryView.BASE64);
+        return BinaryConverter.ToStringView(result, BinaryViewModels.BinaryView.BASE64) == BinaryConverter.ToStringView(info.Derivated.ToArray(), BinaryViewModels.BinaryView.BASE64);
     }
 }

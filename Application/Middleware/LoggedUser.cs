@@ -1,7 +1,7 @@
 ﻿using Interfaces;
+using Interfaces.Repositories;
 using Interfaces.Security;
 using Microsoft.AspNetCore.Http;
-using Repositories.Interfaces;
 using System.Net.Http;
 using static Dtos.AuthorizationModels;
 using static Models.Security.JwtModels;

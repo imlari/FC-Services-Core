@@ -9,4 +9,3 @@ public class HashModels
         SHA256 = 3
     }
 }
-}
