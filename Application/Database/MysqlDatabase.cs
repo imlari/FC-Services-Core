@@ -1,5 +1,5 @@
 ﻿using Dapper;
-using Database.Interfaces;
+using Interfaces.Database;
 using Models.Database;
 using MySql.Data.MySqlClient;
 using System.Data;

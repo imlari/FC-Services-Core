@@ -1,11 +1,18 @@
-﻿using Database.Interfaces;
-using Database;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Database.Connections;
+using Services;
+using Security;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Library;
+using Models.Library;
+using Interfaces.Database;
+using Interfaces.Security;
+using Interfaces;
 
 namespace Core;
 
@@ -35,10 +42,6 @@ public class StartupCore
     public StartupCore(IConfiguration configuration, ServiceName serviceName, string prefix, AnotherServices anotherServices): this(configuration, serviceName, prefix)
     { this.anotherServices = anotherServices; }
 
-    private void ConfigureAuthenticationService(IServiceCollection services)
-    {
-        services.AddScoped<IAuthenticationDatabase, AuthenticationDatabase>(a => DatabaseFactory.AuthenticationDatabase(this.configuration));
-    }
 
     private void ConfigureFeedService(IServiceCollection services)
     {
@@ -50,12 +53,44 @@ public class StartupCore
         services.AddControllers ();
         services.AddHttpContextAccessor();
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+        services.AddScoped<IHash, Hash>();
+        services.AddScoped<IPbkdf2Security, Pbkdf2Security>();
+        services.AddScoped<IJwtService, JwtService>();
+        services.AddScoped<IControllerServices, ControllerServices>();
 
-        switch(this.serviceName)
+        services.AddScoped<IAuthenticationDatabase, AuthenticationDatabase>(a => DatabaseFactory.AuthenticationDatabase(this.configuration));
+
+        switch (this.serviceName)
         {
-            case ServiceName.Authentication: this.ConfigureAuthenticationService(services); break;
             case ServiceName.Feed: this.ConfigureFeedService(services); break;
+            default: throw new NotImplementedException();
         }
+
+        services.AddAuthentication(
+            x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }
+        ).AddJwtBearer(
+            x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                            BinaryConverter.ToBytesView(
+                                this.configuration.GetSection(JwtService.GetEnv("Key")).Value ?? string.Empty,
+                                BinaryViewModels.BinaryView.BASE64
+                            )
+                        ),
+                    ValidateIssuer = true,
+                    ValidateAudience = true
+                };
+            }
+        );
 
         if (this.anotherServices is not null)
             this.anotherServices(services, this);
@@ -72,7 +107,7 @@ public class StartupCore
             endpoints.MapControllers();
             endpoints.MapControllerRoute(
                 name: this.prefix ?? "api",
-                pattern: String.Format("/{0}{1}", (this.prefix ?? "api"), "/{controller}/{action}")
+                pattern: (this.prefix ?? "api") + "/{controller}/{action}"
             );
         });
     }

@@ -1,4 +1,4 @@
-﻿using Database.Interfaces;
+﻿using Interfaces.Database;
 
 namespace Database.Connections;
 

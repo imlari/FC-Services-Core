@@ -3,3 +3,11 @@
 
 */*/[oO]bj
 */*/[bB]in
+
+.vs
+.vscode
+*/.vs
+*/.vscode
+
+*/*/.vs
+*/*/.vscode
