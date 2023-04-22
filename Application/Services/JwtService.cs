@@ -21,11 +21,10 @@ public class JwtService: IJwtService
     public JwtService(IConfiguration Configuration)
     { this.Configuration = Configuration; }
 
-    public static string GetEnv(string Identifier)
-        => $"${prefix}${Identifier}";
+    public static string GetEnv(string Identifier) => $"{prefix}{Identifier}";
 
-    private byte[] GetTokenSecret()
-    { return BinaryConverter.ToBytesView(this.Configuration.GetSection(GetEnv("Key")).Value ?? "", BinaryViewModels.BinaryView.BASE64); }
+    public static byte[] GetTokenSecret(IConfiguration configuration)
+    { return BinaryConverter.ToBytesView(configuration.GetSection(GetEnv("Key")).Value ?? "", BinaryViewModels.BinaryView.BASE64); }
 
     private int GetTotalMinutes()
     {
@@ -41,7 +40,7 @@ public class JwtService: IJwtService
         {
             Subject = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.NameIdentifier, $"{claim.UserId}") }),
             Expires = output.Expire,
-            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(this.GetTokenSecret()), SecurityAlgorithms.HmacSha256Signature)
+            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(GetTokenSecret(this.Configuration)), SecurityAlgorithms.HmacSha256Signature)
         };
         JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
         output.Token = handler.WriteToken(handler.CreateToken(descriptor));
@@ -55,7 +54,7 @@ public class JwtService: IJwtService
             handler.ValidateToken(token, new TokenValidationParameters
             {
                 ValidateIssuerSigningKey = true,
-                IssuerSigningKey = new SymmetricSecurityKey(this.GetTokenSecret()),
+                IssuerSigningKey = new SymmetricSecurityKey(GetTokenSecret(this.Configuration)),
                 ValidateIssuer = false,
                 ValidateAudience = false
             }, out SecurityToken validatedToken);

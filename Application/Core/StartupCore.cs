@@ -13,6 +13,9 @@ using Models.Library;
 using Interfaces.Database;
 using Interfaces.Security;
 using Interfaces;
+using Interfaces.Repositories;
+using Repositories.Authentication;
+using Middleware;
 
 namespace Core;
 
@@ -56,12 +59,17 @@ public class StartupCore
         services.AddScoped<IHash, Hash>();
         services.AddScoped<IPbkdf2Security, Pbkdf2Security>();
         services.AddScoped<IJwtService, JwtService>();
-        services.AddScoped<IControllerServices, ControllerServices>();
 
         services.AddScoped<IAuthenticationDatabase, AuthenticationDatabase>(a => DatabaseFactory.AuthenticationDatabase(this.configuration));
 
+        services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
+
+        services.AddScoped<ILoggedUser, LoggedUser>();
+        services.AddScoped<IControllerServices, ControllerServices>();
+
         switch (this.serviceName)
         {
+            case ServiceName.Authentication: break;
             case ServiceName.Feed: this.ConfigureFeedService(services); break;
             default: throw new NotImplementedException();
         }
@@ -80,12 +88,7 @@ public class StartupCore
                 x.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(
-                            BinaryConverter.ToBytesView(
-                                this.configuration.GetSection(JwtService.GetEnv("Key")).Value ?? string.Empty,
-                                BinaryViewModels.BinaryView.BASE64
-                            )
-                        ),
+                    IssuerSigningKey = new SymmetricSecurityKey(JwtService.GetTokenSecret(this.configuration)),
                     ValidateIssuer = true,
                     ValidateAudience = true
                 };

@@ -2,6 +2,7 @@
 using Interfaces.Repositories;
 using Interfaces.Security;
 using Microsoft.AspNetCore.Http;
+using Repositories.Rules;
 using System.Net.Http;
 using static Dtos.AuthorizationModels;
 using static Models.Security.JwtModels;
@@ -26,7 +27,7 @@ public class LoggedUser: ILoggedUser
                 string token = this.Context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last<string>() ?? string.Empty;
 
                 this.jwtService.Read(token, out ClaimIdentifier claim);
-                this.identifier = this.repository.Find(claim);
+                this.identifier = this.repository.Find(new AuthenticationRules.FindLoggedUserRule { Value = claim });
 
                 if (this.identifier is null) throw new Exception("Unautorized");
             }

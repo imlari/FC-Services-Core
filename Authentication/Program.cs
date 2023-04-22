@@ -4,11 +4,9 @@ public static class Program
 {
     public static int Main(string[] args)
     {
-        var host = CreateHost(args).Build();
-
         try
         {
-            host.Run();
+            CreateHost(args).Build().Run();
             return 0;
         }
 
@@ -20,7 +18,7 @@ public static class Program
 
     private static IHostBuilder CreateHost(string[] args) =>
         Host.CreateDefaultBuilder(args)
-            .ConfigureWebHost(webhost =>
+            .ConfigureWebHostDefaults(webhost =>
             {
                 webhost.UseStartup<Startup>();
             });
