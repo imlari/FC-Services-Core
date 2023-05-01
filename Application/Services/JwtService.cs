@@ -9,7 +9,7 @@ using Interfaces.Security;
 
 namespace Services;
 
-public class JwtService: IJwtService
+public class JwtService : IJwtService
 {
     private readonly IConfiguration Configuration;
 #if DEBUG
