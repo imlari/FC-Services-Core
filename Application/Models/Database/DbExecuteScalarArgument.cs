@@ -1,6 +1,6 @@
 namespace Models.Database;
 
-public class DbExecuteScalarArgument: DbExecuteArgument
+public class DbExecuteScalarArgument : DbExecuteArgument
 {
     private string output = string.Empty;
     public string Output
