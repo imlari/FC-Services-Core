@@ -37,13 +37,16 @@ public class CadastrarUsuarioController : ControllerBase
             return BadRequest("Email e senha são obrigatórios");
         }
 
-        command.CommandText = "INSERT INTO Empregado (Matricula, Nome, Funcao, Email, Senha) VALUES (@Matricula, @Nome, @Funcao, @Email, @Senha)";
+        command.CommandText = "INSERT INTO Empregado (Matricula, Nome, Funcao, Email, Senha, Resolutor, Setor_idSetor) VALUES (@Matricula, @Nome, @Funcao, @Email, @Senha, @Resolutor, @Setor_idSetor)";
         command.Parameters.Clear();
         command.Parameters.AddWithValue("@Matricula", user.Matricula);
         command.Parameters.AddWithValue("@Nome", user.Nome);
         command.Parameters.AddWithValue("@Funcao", user.Funcao);
         command.Parameters.AddWithValue("@Email", user.Email);
         command.Parameters.AddWithValue("@Senha", user.Senha);
+        command.Parameters.AddWithValue("@Resolutor", user.Resolutor);
+        command.Parameters.AddWithValue("@Setor_idSetor", user.Setor_idSetor);
+
         connection.Open();
         command.ExecuteNonQuery();
         connection.Close();
