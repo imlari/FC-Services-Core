@@ -17,7 +17,7 @@ public class CadastrarUsuarioController : ControllerBase
     public IActionResult PostCadastrarEmpregado([FromBody] Empregado user)
     {
 
-        string connectionString = "server=containers-us-west-181.railway.app;port=5947;database=railway;user=root;password=4Fi7NzGpMxBngKKWC1wY";
+        string connectionString = "server=containers-us-west-209.railway.app;port=6938;database=railway;user=root;password=5cu1Y8DVEYLMeej8yleH";
         MySqlConnection connection = new MySqlConnection(connectionString);
         MySqlCommand command = connection.CreateCommand();
 
