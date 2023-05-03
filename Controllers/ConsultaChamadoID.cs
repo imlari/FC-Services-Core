@@ -1,3 +1,4 @@
+using System.Globalization;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 
@@ -22,29 +23,29 @@ namespace backend_squad1.Controllers
             if (reader.Read())
             {
                 string nome = reader.GetString("Nome");
-                DateTime dataRelato = reader.GetDateTime("DataRelato");
+                string dataRelato = reader.GetString("DataRelato");
                 string descricao = reader.GetString("Descricao");
-                string img = reader.GetString("Img");
                 string prioridade = reader.GetString("Prioridade");
                 string horarioAbertura = reader.GetString("HorarioAbertura");
-                string horarioUltimaAtualizacao = reader.GetString("HorarioUltimaAtualizacao");
-                string tipo = reader.GetString("Tipo");
+                string horarioUltimaAtualizacao = reader.GetString("horarioUltimaAtualizacao");
                 string status = reader.GetString("Status");
-                string tempoDescorrido = reader.GetString("TempoDescorrido");
+                string tempoDecorrido = reader.GetString("TempoDescorrido");
+                int empregado_Matricula = reader.GetInt32("Empregado_Matricula");
+                string tipo = reader.GetString("Tipo");
 
                 ConsultaChamado chamado = new ConsultaChamado
                 {
-                    idChamado = id.ToString(),
+                    idChamado = id,
                     Nome = nome,
                     DataRelato = dataRelato,
                     Descricao = descricao,
-                    Img = img,
                     Prioridade = prioridade,
                     HorarioAbertura = horarioAbertura,
                     HorarioUltimaAtualizacao = horarioUltimaAtualizacao,
-                    Tipo = tipo,
                     Status = status,
-                    TempoDescorrido = tempoDescorrido
+                    TempoDecorrido = tempoDecorrido,
+                    Empregado_Matricula = empregado_Matricula,
+                    Tipo = tipo,
                 };
 
                 return Ok(chamado);
