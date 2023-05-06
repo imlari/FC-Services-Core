@@ -36,7 +36,7 @@ public class JwtService : IJwtService
     {
         output = new TokenCreated { Expire = DateTime.UtcNow.AddMinutes(this.GetTotalMinutes()) };
 
-        SecurityTokenDescriptor descriptor = new SecurityTokenDescriptor
+        SecurityTokenDescriptor descriptor = new()
         {
             Subject = new ClaimsIdentity(new[] { new Claim(ClaimTypes.NameIdentifier, $"{claim.UserId}") }),
             Expires = output.Expire,
