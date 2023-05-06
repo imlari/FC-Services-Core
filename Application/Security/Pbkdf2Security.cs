@@ -6,7 +6,7 @@ using static Models.Security.KeyDerivationModels;
 
 namespace Security;
 
-public sealed class Pbkdf2Security: IPbkdf2Security
+public sealed class Pbkdf2Security : IPbkdf2Security
 {
     private static int numBytes = 8192;
 
