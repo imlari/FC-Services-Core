@@ -1,4 +1,4 @@
-﻿using static Models.Security.JwtModels;
+using static Models.Security.JwtModels;
 using System.Security.Claims;
 using Microsoft.Extensions.Configuration;
 using Library;
@@ -38,11 +38,11 @@ public class JwtService : IJwtService
 
         SecurityTokenDescriptor descriptor = new SecurityTokenDescriptor
         {
-            Subject = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.NameIdentifier, $"{claim.UserId}") }),
+            Subject = new ClaimsIdentity(new[] { new Claim(ClaimTypes.NameIdentifier, $"{claim.UserId}") }),
             Expires = output.Expire,
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(GetTokenSecret(this.Configuration)), SecurityAlgorithms.HmacSha256Signature)
         };
-        JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
+        JwtSecurityTokenHandler handler = new();
         output.Token = handler.WriteToken(handler.CreateToken(descriptor));
     }
 
@@ -50,7 +50,7 @@ public class JwtService : IJwtService
     {
         try
         {
-            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
+            JwtSecurityTokenHandler handler = new();
             handler.ValidateToken(token, new TokenValidationParameters
             {
                 ValidateIssuerSigningKey = true,

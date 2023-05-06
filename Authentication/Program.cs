@@ -10,7 +10,7 @@ public static class Program
             return 0;
         }
 
-        catch (Exception ex)
+        catch (Exception)
         {
             return 1;
         }
