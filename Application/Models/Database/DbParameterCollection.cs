@@ -8,7 +8,7 @@ public class DbParameterCollection
 
     private DbParameterCollection() { }
 
-    private string HandleName(string name) => name.Substring(0, 1) == "%"? name : $"@{name}";
+    private string HandleName(string name) => name.Substring(0, 1) == "%" ? name : $"@{name}";
 
     public DbParameterCollection Add(string name, object? value, ParameterDirection direction)
     {

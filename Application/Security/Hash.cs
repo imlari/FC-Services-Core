@@ -7,7 +7,7 @@ using static Models.Security.HashModels;
 
 namespace Security;
 
-public class Hash: IHash
+public class Hash : IHash
 {
     private readonly AppHashAlgorithm cipher = AppHashAlgorithm.SHA512;
 
