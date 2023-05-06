@@ -38,7 +38,7 @@ public class JwtService : IJwtService
 
         SecurityTokenDescriptor descriptor = new()
         {
-            Subject = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.NameIdentifier, $"{claim.UserId}") }),
+            Subject = new ClaimsIdentity(new[]{ new Claim(ClaimTypes.NameIdentifier, $"{claim.UserId}") }),
             Expires = output.Expire,
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(GetTokenSecret(this.Configuration)), SecurityAlgorithms.HmacSha256Signature)
         };
