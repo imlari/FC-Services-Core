@@ -1,4 +1,4 @@
-﻿using Dapper;
+using Dapper;
 using Interfaces.Database;
 using Models.Database;
 using MySql.Data.MySqlClient;
@@ -56,7 +56,7 @@ public class MysqlDatabase : IMysqlDatabase
 
     private DynamicParameters getParameters(DbParameterCollection parameters)
     {
-        DynamicParameters param = new DynamicParameters();
+        DynamicParameters param = new();
 
         foreach (DbParameter dbParam in parameters.Parameters)
             param.Add(name: dbParam.Name, value: dbParam.Value, direction: dbParam.Direction);
@@ -115,7 +115,7 @@ public class MysqlDatabase : IMysqlDatabase
     /// <param name="arg"></param>
     public T? Execute<T>(DbExecuteScalarArgument args)
     {
-        DynamicParameters outputparameter = new DynamicParameters();
+        DynamicParameters outputparameter = new();
         outputparameter.Add(name: args.Output, direction: ParameterDirection.Output);
 
         this.Execute(args);
