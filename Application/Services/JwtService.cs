@@ -9,7 +9,7 @@ using Interfaces.Security;
 
 namespace Services;
 
-public class JwtService: IJwtService
+public class JwtService : IJwtService
 {
     private readonly IConfiguration Configuration;
 #if DEBUG
@@ -38,7 +38,7 @@ public class JwtService: IJwtService
 
         SecurityTokenDescriptor descriptor = new SecurityTokenDescriptor
         {
-            Subject = new ClaimsIdentity(new[]{ new Claim(ClaimTypes.NameIdentifier, $"{claim.UserId}") }),
+            Subject = new ClaimsIdentity(new[] { new Claim(ClaimTypes.NameIdentifier, $"{claim.UserId}") }),
             Expires = output.Expire,
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(GetTokenSecret(this.Configuration)), SecurityAlgorithms.HmacSha256Signature)
         };
