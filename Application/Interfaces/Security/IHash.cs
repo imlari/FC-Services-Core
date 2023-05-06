@@ -1,4 +1,5 @@
-﻿using static Models.Security.HashModels;
+﻿using Models.Library;
+using static Models.Security.HashModels;
 
 namespace Interfaces.Security;
 

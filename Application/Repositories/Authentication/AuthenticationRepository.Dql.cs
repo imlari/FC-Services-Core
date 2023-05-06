@@ -6,10 +6,8 @@ namespace Repositories.Authentication;
 
 public partial class AuthenticationRepository
 {
-    public LoggedUserDto Find(FindLoggedUserRule businessRule)
+    public LoggedUserDto? Find(FindLoggedUserRule businessRule)
     {
-
-
-        return new LoggedUserDto();
+        return null;
     }
 }

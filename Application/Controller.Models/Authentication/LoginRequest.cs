@@ -1,8 +1,11 @@
 
 namespace Controller.Models;
 
-public class Access
+public static class AccountModels
 {
-    public string Email { get; set; }
-    public string Senha { get; set; }
+    public class SingInInput
+    {
+        public string Email { get; set; } = string.Empty;
+        public string Senha { get; set; } = string.Empty;
+    }
 }

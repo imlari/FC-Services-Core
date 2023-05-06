@@ -6,5 +6,5 @@ namespace Interfaces.Repositories;
 
 public interface IAuthenticationRepository
 {
-    LoggedUserDto Find(FindLoggedUserRule claim);
+    LoggedUserDto? Find(FindLoggedUserRule claim);
 }

@@ -21,16 +21,19 @@ public class LoggedUser: ILoggedUser
     {
         get
         {
-            if (this.Context is null) throw new Exception("Unautorized");
+            if (this.Context is null) 
+                throw new Exception("Unautorized");
+
             if (this.identifier is null)
             {
                 string token = this.Context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last<string>() ?? string.Empty;
 
                 this.jwtService.Read(token, out ClaimIdentifier claim);
                 this.identifier = this.repository.Find(new AuthenticationRules.FindLoggedUserRule { Value = claim });
-
-                if (this.identifier is null) throw new Exception("Unautorized");
             }
+
+            if (this.identifier is null)
+                throw new Exception("Unautorized");
 
             return this.identifier;
         }

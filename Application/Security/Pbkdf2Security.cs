@@ -21,7 +21,13 @@ public sealed class Pbkdf2Security: IPbkdf2Security
     };
 
     private byte[] DeriveValue(string value, byte[] salt, HashDerivation hashDerivation) =>
-        KeyDerivation.Pbkdf2(password: value, salt: salt, prf: Convert(hashDerivation), iterationCount: value.Length * 10, numBytesRequested: numBytes);
+        KeyDerivation.Pbkdf2(
+            password: value, 
+            salt: salt, 
+            prf: Convert(hashDerivation), 
+            iterationCount: value.Length * 10, 
+            numBytesRequested: numBytes
+        );
 
     public string Write(string value, HashDerivation hashDerivation)
     {
