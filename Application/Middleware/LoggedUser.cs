@@ -9,7 +9,7 @@ using static Models.Security.JwtModels;
 
 namespace Middleware;
 
-public class LoggedUser: ILoggedUser
+public class LoggedUser : ILoggedUser
 {
     private readonly IAuthenticationRepository repository;
     private readonly IJwtService jwtService;
