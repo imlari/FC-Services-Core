@@ -34,15 +34,15 @@ public class StartupCore
     private ServiceName serviceName;
 
     public StartupCore(IConfiguration configuration, ServiceName serviceName)
-    { 
+    {
         this.configuration = configuration;
         this.serviceName = serviceName;
     }
 
-    public StartupCore(IConfiguration configuration, ServiceName serviceName, string prefix): this(configuration, serviceName)
+    public StartupCore(IConfiguration configuration, ServiceName serviceName, string prefix) : this(configuration, serviceName)
     { this.prefix = prefix; }
 
-    public StartupCore(IConfiguration configuration, ServiceName serviceName, string prefix, AnotherServices anotherServices): this(configuration, serviceName, prefix)
+    public StartupCore(IConfiguration configuration, ServiceName serviceName, string prefix, AnotherServices anotherServices) : this(configuration, serviceName, prefix)
     { this.anotherServices = anotherServices; }
 
 
@@ -51,9 +51,9 @@ public class StartupCore
         services.AddScoped<IFeedDatabase, FeedDatabase>(a => DatabaseFactory.FeedDatabase(this.configuration));
     }
 
-    public void ConfigureServices (IServiceCollection services)
+    public void ConfigureServices(IServiceCollection services)
     {
-        services.AddControllers ();
+        services.AddControllers();
         services.AddHttpContextAccessor();
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         services.AddScoped<IHash, Hash>();
