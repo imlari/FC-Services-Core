@@ -82,7 +82,7 @@ public class MysqlDatabase : IMysqlDatabase
     ///     find unique value
     /// </summary>
     /// <param name="arg"></param>
-    public T? Find<T> (DbExecuteArgument arg)
+    public T? Find<T>(DbExecuteArgument arg)
     {
         var result = this.ExecuteReader<T>(arg);
         return result.FirstOrDefault();

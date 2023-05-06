@@ -9,7 +9,7 @@ using Interfaces.Security;
 
 namespace Services;
 
-public class JwtService: IJwtService
+public class JwtService : IJwtService
 {
     private readonly IConfiguration Configuration;
 #if DEBUG
@@ -37,11 +37,11 @@ public class JwtService: IJwtService
         output = new TokenCreated { Expire = DateTime.UtcNow.AddMinutes(this.GetTotalMinutes()) };
 
         SecurityTokenDescriptor descriptor = new()
-{
-    Subject = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.NameIdentifier, $"{claim.UserId}") }),
-    Expires = output.Expire,
-    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(GetTokenSecret(this.Configuration)), SecurityAlgorithms.HmacSha256Signature)
-};
+        {
+            Subject = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.NameIdentifier, $"{claim.UserId}") }),
+            Expires = output.Expire,
+            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(GetTokenSecret(this.Configuration)), SecurityAlgorithms.HmacSha256Signature)
+        };
         JwtSecurityTokenHandler handler = new();
         output.Token = handler.WriteToken(handler.CreateToken(descriptor));
     }
