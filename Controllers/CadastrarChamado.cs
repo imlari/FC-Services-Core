@@ -31,11 +31,7 @@ namespace backend_squad1.Controllers
 
             connection.Open();
 
-            // Executa o comando de inserção e recupera o ID do novo registro
-            int novoId = Convert.ToInt32(command.ExecuteScalar());
 
-            // Define o ID do chamado com base no ID gerado no banco
-            chamado.idChamado = novoId;
 
             return Ok(chamado);
         }

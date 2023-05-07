@@ -8,14 +8,15 @@ namespace backend_squad1.Controllers
     [Route("[controller]")]
     public class ConsultaChamadoController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult GetAllChamados()
+        [HttpGet("{matricula}", Name = "GetChamadosByMatricula")]
+        public IActionResult GetAllChamados(int matricula)
         {
             string connectionString = "server=containers-us-west-209.railway.app;port=6938;database=railway;user=root;password=5cu1Y8DVEYLMeej8yleH";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand command = connection.CreateCommand();
 
-            command.CommandText = "SELECT * FROM Chamado";
+            command.CommandText = "SELECT * FROM Chamado WHERE Empregado_Matricula = @Matricula";
+            command.Parameters.AddWithValue("@Matricula", matricula);
             connection.Open();
             MySqlDataReader reader = command.ExecuteReader();
 
@@ -23,6 +24,7 @@ namespace backend_squad1.Controllers
 
             while (reader.Read())
             {
+                int idChamado = reader.GetInt32("idChamado");
                 string nome = reader.GetString("Nome");
                 string dataRelato = reader.GetString("DataRelato");
                 string descricao = reader.GetString("Descricao");
@@ -36,6 +38,7 @@ namespace backend_squad1.Controllers
 
                 ConsultaChamado chamado = new ConsultaChamado
                 {
+                    idChamado = idChamado,
                     Nome = nome,
                     DataRelato = dataRelato,
                     Descricao = descricao,
@@ -53,6 +56,5 @@ namespace backend_squad1.Controllers
 
             return Ok(chamados);
         }
-
     }
 }
