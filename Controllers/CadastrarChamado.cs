@@ -30,10 +30,31 @@ namespace backend_squad1.Controllers
             command.Parameters.AddWithValue("@Tipo", chamado.Tipo);
 
             connection.Open();
+            if (!DateTime.TryParseExact(chamado.DataRelato, "yyyy/mm/dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime dataRelato))
+            {
+                return BadRequest("A data de relato está em um formato inválido.");
+            }
+            if (!TimeSpan.TryParse(chamado.HorarioAbertura, out TimeSpan horarioAbertura))
+            {
+                return BadRequest("O valor passado para o campo 'horarioAbertura' não é uma hora válida.");
+            }
+
+            if (!TimeSpan.TryParse(chamado.TempoDecorrido, out TimeSpan tempoDecorrido))
+            {
+                return BadRequest("O valor passado para o campo 'tempoDecorrido' não é uma hora válida.");
+            }
+
+            if (!DateTime.TryParse(chamado.HorarioUltimaAtualizacao, out DateTime horarioUltimaAtualizacao))
+            {
+                return BadRequest("O valor passado para o campo 'horarioUltimaAtualizacao' não é uma data válida.");
+            }
 
 
+            int id = Convert.ToInt32(command.ExecuteScalar());
+            connection.Close();
 
-            return Ok(chamado);
+            return Ok(new { Id = id });
         }
+
     }
 }
