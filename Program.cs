@@ -19,7 +19,7 @@ namespace backend_squad1
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API title", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API FC Service", Version = "v1" });
 
                 // Configure Swagger to use JWT Bearer authentication
                 var securityScheme = new OpenApiSecurityScheme
@@ -56,8 +56,6 @@ namespace backend_squad1
                         ValidateAudience = false,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = "your_issuer_here",
-                        ValidAudience = "your_audience_here",
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("chave-secreta-para-squad1-jwt"))
                     };
                 });
