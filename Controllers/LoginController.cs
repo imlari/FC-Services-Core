@@ -51,7 +51,7 @@ namespace backend_squad1.Controllers
                 {
                     // Gerar o token JWT com as informações do usuário
                     var tokenHandler = new JwtSecurityTokenHandler();
-                    var key = Encoding.ASCII.GetBytes("chave-secreta-para-token-jwt");
+                    var key = Encoding.ASCII.GetBytes("chave-secreta-para-squad1-jwt");
                     var tokenDescriptor = new SecurityTokenDescriptor
                     {
                         Subject = new ClaimsIdentity(new Claim[]

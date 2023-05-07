@@ -1,6 +1,8 @@
 using System.Globalization;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace backend_squad1.Controllers
 {
@@ -9,6 +11,7 @@ namespace backend_squad1.Controllers
     public class ConsultaChamadoController : ControllerBase
     {
         [HttpGet("{matricula}", Name = "GetChamadosByMatricula")]
+        [Authorize]
         public IActionResult GetAllChamados(int matricula)
         {
             string connectionString = "server=containers-us-west-209.railway.app;port=6938;database=railway;user=root;password=5cu1Y8DVEYLMeej8yleH";
