@@ -1,5 +1,9 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using MySql.Data.MySqlClient;
+using System;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
@@ -45,12 +49,30 @@ namespace backend_squad1.Controllers
 
                 if (!string.IsNullOrEmpty(matricula) && !string.IsNullOrEmpty(nome))
                 {
-                    return Ok(new { Matricula = matricula, Nome = nome });
+                    // Gerar o token JWT com as informações do usuário
+                    var tokenHandler = new JwtSecurityTokenHandler();
+                    var key = Encoding.ASCII.GetBytes("chave-secreta-para-token-jwt");
+                    var tokenDescriptor = new SecurityTokenDescriptor
+                    {
+                        Subject = new ClaimsIdentity(new Claim[]
+                        {
+                            new Claim(ClaimTypes.Name, matricula),
+                            new Claim(ClaimTypes.Email, login.Email),
+                            new Claim("nome", nome)
+                        }),
+                        Expires = DateTime.UtcNow.AddDays(7),
+                        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                    };
+                    var token = tokenHandler.CreateToken(tokenDescriptor);
+                    var tokenString = tokenHandler.WriteToken(token);
+
+                    // Adicionar o token na resposta
+                    return Ok(new { Matricula = matricula, Nome = nome, Token = tokenString });
                 }
             }
             return BadRequest("Usuário ou senha incorretos");
         }
+
+
     }
-
-
 }
