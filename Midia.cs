@@ -7,8 +7,8 @@ namespace backend_squad1
 {
     public class Midia
     {
-        string tipoMidia;
-        string linkMidia;
-        int chamado_idChamado;
+        public string TipoMidia { get; set; }
+        public string LinkMidia { get; set; }
+        public int ChamadoIdChamado { get; set; }
     }
 }
