@@ -82,6 +82,7 @@ namespace backend_squad1
             });
 
             app.Run();
+
         }
     }
 }

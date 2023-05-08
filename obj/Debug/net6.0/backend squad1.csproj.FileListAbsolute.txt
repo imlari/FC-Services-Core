@@ -180,3 +180,4 @@ C:\Users\alisson.assuncao\Desktop\FC-Services-Core\bin\Debug\net6.0\Google.Apis.
 C:\Users\alisson.assuncao\Desktop\FC-Services-Core\bin\Debug\net6.0\Google.Cloud.Storage.V1.dll
 C:\Users\alisson.assuncao\Desktop\FC-Services-Core\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\alisson.assuncao\Desktop\FC-Services-Core\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\alisson.assuncao\Desktop\FC-Services-Core\bin\Debug\net6.0\fc-services-ba67f-firebase-adminsdk-nytje-1959376e26.json
